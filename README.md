@@ -12,7 +12,7 @@ It needs bash shell installed in the host
 
 ## C. Supported Systems
 
-In theory any Unix/Linux system with bash instatlled
+In theory any Unix/Linux system with bash installed
 
 ## Installation
 
