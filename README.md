@@ -17,14 +17,20 @@ In theory any Unix/Linux system with bash instatlled
 ## Installation
 
 - Clone the repository
+```bash
 git clone https://github.com/nobre165/filesystem_analysis.git
+```
 
 - Change the pernmission of script
+```bash
 cd filesystem_analysis
 chmod 755 get_file_sizes.sh
+```
 
 - Run the script
+```bash
 ./get_file_sizes.sh /fs1 /fs2 /fs3 ... /fsN
+```
 
 ## Notes
 
