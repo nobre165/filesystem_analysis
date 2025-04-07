@@ -181,6 +181,6 @@ do
         FSNAME=$(echo $fs | sed -e 's#^/##; s#^\./##; s#/#_#g')
         OUTPUT_FILE="${HOST}_${FSNAME}_${DATE}_${TIME}.out"
         echo "File,Size_bytes" > ${OUTPUT_DIR}/${OUTPUT_FILE}
-        find "$fs" -xdev -type f -printf '"%p",%s' >> ${OUTPUT_DIR}/${OUTPUT_FILE}
+        find "$fs" -xdev -type f -printf '"%p",%s\n' >> ${OUTPUT_DIR}/${OUTPUT_FILE}
     fi
 done
