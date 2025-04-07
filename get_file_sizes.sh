@@ -183,6 +183,6 @@ do
         einfo "Starting collect data $fs..."
         echo "File,Size_bytes" > ${OUTPUT_DIR}/${OUTPUT_FILE}
         find "$fs" -xdev -type f -printf '"%p",%s\n' >> ${OUTPUT_DIR}/${OUTPUT_FILE}
-        einfo "File ${FSNAME} generated..."
+        einfo "File ${OUTPUT_FILE} generated..."
     fi
 done
