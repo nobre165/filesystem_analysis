@@ -172,13 +172,13 @@ done
 # set positional arguments in their proper place
 eval set -- "$PARAMS"
 
-declare -a FILESYSTEMS=( echo ${PARAMS} )
+read -r -a FILESYSTEMS <<< "${PARAMS}"
 
 for fs in "${FILESYSTEMS[@]}"
 do
     if [[ -e $fs ]]
     then
-        FSNAME=$(echo $fs | sed -e 's#^/##; s#^\./##; s#/#_#g')
+        FSNAME=$(echo "$fs" | sed -e 's#^/##; s#^\./##; s#/#_#g')
         OUTPUT_FILE="${HOST}_${FSNAME}_${DATE}_${TIME}.out"
         einfo "Starting collect data $fs..."
         echo "File,Size_bytes" > ${OUTPUT_DIR}/${OUTPUT_FILE}
