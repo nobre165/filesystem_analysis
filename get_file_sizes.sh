@@ -151,7 +151,7 @@ while (("$#")); do
                 OUTPUT_DIR=$2
                 shift 2
             else
-                eerror "Error: Argument for $1 is missing"
+                eerror "Argument for $1 is missing"
                 exit 1
             fi
             ;;
@@ -160,7 +160,7 @@ while (("$#")); do
             exit 0
             ;;
         -* | --*=) # unsupported flags
-            eerror "Error: Unsupported flag $1"
+            eerror "Unsupported flag $1"
             exit 1
             ;;
         *) # preserve positional arguments
